@@ -9,10 +9,10 @@ st.set_page_config(page_title="YouTube ML Predictor", page_icon="📺")
 # Cargar los artefactos del modelo
 @st.cache_resource
 def load_model_assets():
-    model = joblib.load('best_youtube_model.pkl')
-    scaler_X = joblib.load('scaler_X.pkl')
-    scaler_y = joblib.load('scaler_y.pkl')
-    features_list = joblib.load('features_order.pkl')
+    model = joblib.load('youtube_predictor/model/best_youtube_model.pkl')
+    scaler_X = joblib.load('youtube_predictor/model/scaler_X.pkl')
+    scaler_y = joblib.load('youtube_predictor/model/scaler_y.pkl')
+    features_list = joblib.load('youtube_predictor/model/features_order.pkl')
     return model, scaler_X, scaler_y, features_list
 
 model, scaler_X, scaler_y, features_list = load_model_assets()
